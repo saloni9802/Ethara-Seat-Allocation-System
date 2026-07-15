@@ -11,7 +11,10 @@ app = FastAPI(
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Replace with your Netlify URL later
+    allow_origins=[
+        "http://localhost:5173",
+        "https://extraordinary-biscuit-171715.netlify.app",
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
